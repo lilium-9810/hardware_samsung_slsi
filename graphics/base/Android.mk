@@ -16,12 +16,20 @@ ifneq ($(findstring exynos, $(TARGET_SOC_NAME)), $(findstring s5e, $(TARGET_SOC_
 build_dirs :=  \
     libhwjpeg  \
     libfimg    \
-    libscaler  \
     libacryl \
     libmpp \
     libmemtrack \
     giantmscl \
     libdrmresource
+
+ifeq ($(BOARD_USES_LEGACY_LIBSCALER), true)
+build_dirs +=  \
+    legacy_libscaler \
+    legacy_libgscaler
+else
+build_dirs +=  \
+    libscaler
+endif
 
 ifdef BOARD_HWC_VERSION
 build_dirs += $(BOARD_HWC_VERSION)
