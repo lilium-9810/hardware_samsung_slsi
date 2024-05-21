@@ -58,7 +58,7 @@ LOCAL_HEADER_LIBRARIES := \
 	libhdrinterface_header
 
 LOCAL_C_INCLUDES := \
-	$(TOP)/hardware/samsung_slsi-linaro/exynos/include \
+	$(TOP)/hardware/samsung_slsi/exynos/include \
 	$(TOP)/hardware/samsung_slsi-linaro/graphics/base/include \
 	$(TOP)/hardware/samsung_slsi-linaro/graphics/base/libhwc2.1 \
 	$(TOP)/hardware/samsung_slsi-linaro/graphics/base/libhwc2.1/libdevice \
